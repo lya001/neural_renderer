@@ -70,7 +70,7 @@ class Renderer(nn.Module):
         
         if mode is None:
             return self.render(vertices, faces, textures, K, R, t, dist_coeffs, orig_size)
-        elif mode is 'rgb':
+        elif mode == 'rgb':
             return self.render_rgb(vertices, faces, textures, K, R, t, dist_coeffs, orig_size)
         elif mode == 'silhouettes':
             return self.render_silhouettes(vertices, faces, K, R, t, dist_coeffs, orig_size)
